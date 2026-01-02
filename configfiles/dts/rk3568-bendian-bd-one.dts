@@ -268,7 +268,7 @@
 		simple-audio-card,name = "HDMI";
 		simple-audio-card,format = "i2s";
 		simple-audio-card,mclk-fs = <0x100>;
-		status = "disabled";
+		status = "okay";
 
 		simple-audio-card,codec {
 			sound-dai = <0x0e>;
@@ -1724,7 +1724,7 @@
 		pinctrl-names = "default";
 		#address-cells = <0x01>;
 		#size-cells = <0x00>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	i2c@fe5e0000 {

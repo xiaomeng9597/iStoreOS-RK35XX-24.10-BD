@@ -268,7 +268,7 @@
 		simple-audio-card,name = "HDMI";
 		simple-audio-card,format = "i2s";
 		simple-audio-card,mclk-fs = <0x100>;
-		status = "disabled";
+		status = "okay";
 
 		simple-audio-card,codec {
 			sound-dai = <0x0e>;
@@ -3986,6 +3986,21 @@
 		resets = <0x15 0x69>;
 		reset-names = "crypto-rst";
 		status = "okay";
+	};
+
+	reserved-memory {
+		#address-cells = <0x02>;
+		#size-cells = <0x02>;
+		ranges;
+
+		ramoops@110000 {
+			compatible = "ramoops";
+			reg = <0x00 0x110000 0x00 0xf0000>;
+			console-size = <0x80000>;
+			ftrace-size = <0x00>;
+			pmsg-size = <0x50000>;
+			record-size = <0x20000>;
+		};
 	};
 
 	chosen {
