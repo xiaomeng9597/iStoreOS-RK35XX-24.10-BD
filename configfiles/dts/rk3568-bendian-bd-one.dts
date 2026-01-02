@@ -1093,7 +1093,7 @@
 		snps,mtl-tx-config = <0x57>;
 		snps,tso;
 		status = "okay";
-		phy-mode = "sgmii";
+		phy-mode = "rgmii";
 		rockchip,pipegrf = <0x58>;
 		rockchip,xpcs = <0x59>;
 		assigned-clocks = <0x15 0x189>;
