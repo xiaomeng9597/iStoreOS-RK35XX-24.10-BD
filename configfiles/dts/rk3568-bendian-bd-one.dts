@@ -1100,6 +1100,9 @@
 		assigned-clock-parents = <0x5a>;
 		pinctrl-names = "default";
 		pinctrl-0 = <0x5b>;
+		tx_delay = <0x4f>;
+		rx_delay = <0x26>;
+		phy-handle = <&ethernet_phy>;
 		power-domains = <0x17 0x0f>;
 		phys = <0x16 0x08>;
 
