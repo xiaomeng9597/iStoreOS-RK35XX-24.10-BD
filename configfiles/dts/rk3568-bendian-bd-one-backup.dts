@@ -1724,7 +1724,7 @@
 		pinctrl-names = "default";
 		#address-cells = <0x01>;
 		#size-cells = <0x00>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	i2c@fe5e0000 {
