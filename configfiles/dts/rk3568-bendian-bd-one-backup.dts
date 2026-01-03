@@ -1095,7 +1095,6 @@
 		status = "okay";
 		phy-mode = "rgmii";
 		rockchip,pipegrf = <0x58>;
-		rockchip,xpcs = <0x59>;
 		assigned-clocks = <0x15 0x189>;
 		assigned-clock-parents = <0x5a>;
 		pinctrl-names = "default";
@@ -4258,7 +4257,6 @@
 		compatible = "rockchip,rk3568-xpcs", "syscon";
 		reg = <0x00 0xfda00000 0x00 0x200000>;
 		status = "disabled";
-		phandle = <0x59>;
 	};
 
 	xpcs-gmac0-clock {

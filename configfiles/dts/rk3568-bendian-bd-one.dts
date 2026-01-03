@@ -1095,9 +1095,9 @@
 		status = "okay";
 		phy-mode = "rgmii";
 		rockchip,pipegrf = <0x58>;
-		rockchip,xpcs = <0x59>;
-		assigned-clocks = <0x15 0x189>;
-		assigned-clock-parents = <0x5a>;
+		assigned-clocks = <0x15 0x189 0x15 0x186>;
+		assigned-clock-parents = <0x15 0x187>;
+		assigned-clock-rates = <0x00 0x7735940>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&gmac1m0_miim &gmac1m0_tx_bus2 &gmac1m0_rx_bus2 &gmac1m0_rgmii_clk &gmac1m0_rgmii_bus>;
 		tx_delay = <0x4f>;
@@ -1114,6 +1114,7 @@
 			ethernet_phy: ethernet-phy@0 {
 				compatible = "ethernet-phy-ieee802.3-c22";
 				reg = <0x00>;
+				realtek,led-data = <0x17b>;
 			};
 		};
 
@@ -4258,7 +4259,6 @@
 		compatible = "rockchip,rk3568-xpcs", "syscon";
 		reg = <0x00 0xfda00000 0x00 0x200000>;
 		status = "disabled";
-		phandle = <0x59>;
 	};
 
 	xpcs-gmac0-clock {
