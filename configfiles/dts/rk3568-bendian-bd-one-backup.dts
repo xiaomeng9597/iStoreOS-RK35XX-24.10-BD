@@ -3487,7 +3487,6 @@
 		fixed-link {
 			speed = <0x3e8>;
 			full-duplex;
-			pause;
 		};
 	};
 
