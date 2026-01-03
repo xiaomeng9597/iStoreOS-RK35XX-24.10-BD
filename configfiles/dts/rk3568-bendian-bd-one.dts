@@ -1140,11 +1140,6 @@
 			queue0 {
 			};
 		};
-
-		fixed-link {
-			speed = <0x3e8>;
-			full-duplex;
-		};
 	};
 
 	vop@fe040000 {
@@ -3491,6 +3486,7 @@
 		fixed-link {
 			speed = <0x3e8>;
 			full-duplex;
+			pause;
 		};
 	};
 
