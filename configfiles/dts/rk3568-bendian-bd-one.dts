@@ -1094,6 +1094,7 @@
 		snps,tso;
 		status = "okay";
 		phy-mode = "rgmii";
+		clock_in_out = "output";
 		rockchip,pipegrf = <0x58>;
 		assigned-clocks = <0x15 0x189 0x15 0x186>;
 		assigned-clock-parents = <0x15 0x187 0x15 0xc5>;
