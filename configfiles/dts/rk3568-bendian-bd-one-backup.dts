@@ -1096,7 +1096,7 @@
 		phy-mode = "rgmii";
 		rockchip,pipegrf = <0x58>;
 		assigned-clocks = <0x15 0x189 0x15 0x186>;
-		assigned-clock-parents = <0x15 0x187>;
+		assigned-clock-parents = <0x15 0x187 0x15 0xc5>;
 		assigned-clock-rates = <0x00 0x7735940>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&gmac1m0_miim &gmac1m0_tx_bus2 &gmac1m0_rx_bus2 &gmac1m0_rgmii_clk &gmac1m0_rgmii_bus>;
@@ -1120,8 +1120,8 @@
 
 		stmmac-axi-config {
 			snps,blen = <0x00 0x00 0x00 0x00 0x10 0x08 0x04>;
-			snps,rd_osr_lmt = <0x08>;
 			snps,wr_osr_lmt = <0x04>;
+			snps,rd_osr_lmt = <0x08>;
 			phandle = <0x55>;
 		};
 
