@@ -341,17 +341,22 @@
 
 	interrupt-controller@fd400000 {
 		compatible = "arm,gic-v3";
+		reg = <0x00 0xfd400000 0x00 0x10000 0x00 0xfd460000 0x00 0x80000>;
+		interrupts = <0x01 0x09 0x04>;
+		interrupt-controller;
 		#interrupt-cells = <0x03>;
 		#address-cells = <0x02>;
 		#size-cells = <0x02>;
+		mbi-alias = <0x00 0xfd410000>;
+		mbi-ranges = <0x128 0x18>;
+		msi-controller;
 		ranges;
-		interrupt-controller;
-		reg = <0x00 0xfd400000 0x00 0x10000 0x00 0xfd460000 0x00 0xc0000>;
-		interrupts = <0x01 0x09 0x04>;
+		dma-noncoherent;
 		phandle = <0x01>;
 
 		interrupt-controller@fd440000 {
-			compatible = "arm,gic-v3-its", "arm,its-v3";
+			compatible = "arm,gic-v3-its";
+			dma-noncoherent;
 			msi-controller;
 			#msi-cells = <0x01>;
 			reg = <0x00 0xfd440000 0x00 0x20000>;
